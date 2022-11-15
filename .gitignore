@@ -1,0 +1,7 @@
+config.h
+st
+st.o
+x.o
+patches/unused/
+*.orig
+*.rej
