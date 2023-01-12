@@ -214,13 +214,17 @@ static char *copyoutput[] = { "/bin/sh", "-xc", "st-copyout", "externalpipe", NU
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ MODKEY,		XK_y,		externalpipe,	{.v = copyurlcmd } },
+	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
 	{ MODKEY,		XK_o,		externalpipe,	{.v = copyoutput } },
 	{ MODKEY,		XK_l,		externalpipe,	{.v = openurlcmd } },
-	{ MODKEY|ShiftMask,	XK_h,		zoomreset,	{.f =  0} },
-	{ MODKEY|ShiftMask,	XK_j,		zoom,		{.f = -1} },
-	{ MODKEY|ShiftMask,	XK_k,		zoom,		{.f = +1} },
-	{ MODKEY,		XK_v,		clippaste,	{.i =  0} },
+	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
+	{ MODKEY,            	XK_j,   	kscrolldown,    {.i = 1} },
+	{ MODKEY,		XK_k,		kscrollup,	{.i = 1} },
 	{ MODKEY,		XK_c,		clipcopy,	{.i =  0} },
+	{ MODKEY,		XK_v,		clippaste,	{.i =  0} },
+	{ MODKEY|ShiftMask,	XK_H,		zoomreset,	{.f =  0} },
+	{ MODKEY|ShiftMask,	XK_J,		zoom,		{.f = -1} },
+	{ MODKEY|ShiftMask,	XK_K,		zoom,		{.f = +1} },
 // defualts - might change later
 	{ XK_ANY_MOD,		XK_Break,	sendbreak,	{.i =  0} },
 	{ ControlMask,		XK_Print,	toggleprinter,	{.i =  0} },
@@ -228,8 +232,6 @@ static Shortcut shortcuts[] = {
 	{ XK_ANY_MOD,		XK_Print,	printsel,	{.i =  0} },
 	{ ShiftMask,		XK_Insert,	selpaste,	{.i =  0} },
 	{ TERMMOD,		XK_Num_Lock,	numlock,	{.i =  0} },
-	{ ShiftMask,		XK_Page_Up,	kscrollup,	{.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
