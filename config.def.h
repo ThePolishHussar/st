@@ -199,8 +199,8 @@ ResourcePref resources[] = {
 const unsigned int mousescrollincrement = 1;
 static MouseShortcut mshortcuts[] = {
 	/* mask			button		function        argument       			release */
-	{ ShiftMask,		Button4,	kscrollup,	{.i = mousescrollincrement} },
-	{ ShiftMask,		Button5,	kscrolldown,	{.i = mousescrollincrement} },
+	{ 0,		Button4,	kscrollup,	{.i = mousescrollincrement} },
+	{ 0,		Button5,	kscrolldown,	{.i = mousescrollincrement} },
 };
 
 /* Internal keyboard shortcuts. */
